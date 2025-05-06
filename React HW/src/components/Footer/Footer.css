@@ -1,0 +1,23 @@
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .social-links a {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: var(--accent-color);
+  }
