@@ -13,7 +13,6 @@ This repository contains a React-based web application created for Homework Assi
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Screenshots](#screenshots)
 - [License](#license)
 - [Questions](#questions)
 
@@ -54,11 +53,6 @@ After starting the application, open your browser and navigate to `http://localh
 - **HTML**: Structure for web components
 - **JavaScript**: Programming logic and React component functionality
 - **npm**: Package management and build scripts
-
-## Screenshots
-
-![Application Screenshot](./assets/images/screenshot.png)
-*[Replace with actual screenshot of your application]*
 
 ## License
 
