@@ -1,0 +1,156 @@
+/* Resume Page Styling */
+.resume-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .resume-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .resume-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+  }
+  
+  .resume-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Resume Download Section */
+  .resume-download {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resume-download p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .download-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Proficiencies Section */
+  .proficiencies {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .proficiencies h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .proficiency-lists {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .proficiency-category {
+    margin-bottom: 1rem;
+  }
+  
+  .proficiency-category h4 {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--accent-color);
+  }
+  
+  .proficiency-category ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .proficiency-category li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .proficiency-category li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+  }
+  
+  /* Animation for proficiency items */
+  .proficiency-category li {
+    transition: transform 0.2s ease;
+  }
+  
+  .proficiency-category li:hover {
+    transform: translateX(5px);
+    color: var(--primary-color);
+  }
+  
+  /* Responsive design */
+  @media screen and (min-width: 768px) {
+    .proficiency-lists {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .proficiency-lists {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .resume-section {
+      padding: 3rem 1rem;
+    }
+  }
+  
+  /* Print styles for the resume page */
+  @media print {
+    .resume-section {
+      padding: 0;
+    }
+    
+    .download-btn {
+      display: none;
+    }
+    
+    .proficiency-category li:before {
+      content: '•';
+    }
+  }
