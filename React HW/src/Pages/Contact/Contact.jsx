@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './Contact.css';
 
 function Contact() {
   const [formState, setFormState] = useState({
@@ -9,6 +9,7 @@ function Contact() {
   });
 
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const { name, email, message } = formState;
 
@@ -41,51 +42,83 @@ function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(formState);
-    // Here you would typically send the form data to a server
-    // Since there's no backend for this project, we can just log the form data
-    alert('Thank you for your message! In a real application, this would be sent to a server.');
+    
+    if (name && email && message) {
+      // Here you would typically send the form data to a server
+      // Since there's no backend, we'll just show a success message
+      setSuccessMessage('Thank you for your message! I will get back to you soon.');
+      setFormState({ name: '', email: '', message: '' });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setSuccessMessage('');
+      }, 5000);
+    } else {
+      setErrorMessage('Please fill out all fields.');
+    }
   }
 
   return (
     <section className="contact-section">
       <h2>Contact Me</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            defaultValue={name}
-            onBlur={handleChange}
-            required
-          />
+        {/* Two-column layout for name and email on larger screens */}
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={handleChange}
+              onBlur={handleChange}
+              placeholder="Your name"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              onBlur={handleChange}
+              placeholder="your.email@example.com"
+              required
+            />
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email address:</label>
-          <input
-            type="email"
-            name="email"
-            defaultValue={email}
-            onBlur={handleChange}
-            required
-          />
-        </div>
+        
         <div className="form-group">
           <label htmlFor="message">Message:</label>
           <textarea
+            id="message"
             name="message"
             rows="5"
-            defaultValue={message}
+            value={message}
+            onChange={handleChange}
             onBlur={handleChange}
+            placeholder="Your message here..."
             required
           />
         </div>
+        
         {errorMessage && (
           <div className="error-message">
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button type="submit" className="submit-btn">Submit</button>
+        
+        {successMessage && (
+          <div className="success-message">
+            <p className="success-text">{successMessage}</p>
+          </div>
+        )}
+        
+        <button type="submit" className="submit-btn">Send Message</button>
       </form>
     </section>
   );

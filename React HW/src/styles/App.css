@@ -17,11 +17,12 @@
     line-height: 1.6;
     color: var(--dark-color);
     background-color: var(--light-color);
+    max-width: fit-content;
   }
   
   .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 1rem;
   }

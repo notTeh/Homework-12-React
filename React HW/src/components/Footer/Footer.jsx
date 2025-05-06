@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="social-links">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/notTeh" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
           <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
@@ -15,7 +15,7 @@ function Footer() {
             Stack Overflow
           </a>
         </div>
-        <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Tyler Hayman. All rights reserved.</p>
       </div>
     </footer>
   );

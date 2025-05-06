@@ -17,7 +17,7 @@ function About() {
             With experience in JavaScript, React, Node.js, and more, I enjoy solving complex problems and learning new technologies.
           </p>
           <p>
-            When I'm not coding, you can find me [your hobbies/interests]. I believe in continuous learning and am always looking to expand my knowledge in the world of web development.
+            When I'm not coding, you can find me playing video games or watching anime. I believe in continuous learning and am always looking to expand my knowledge in the world of web development.
           </p>
         </div>
       </div>
