@@ -15,6 +15,7 @@ This repository contains a React-based web application created for Homework Assi
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Questions](#questions)
+- [Screenshots](#screenshots)
 
 ## Installation
 
@@ -57,6 +58,13 @@ After starting the application, open your browser and navigate to `http://localh
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+# Screenshots
+![image](https://github.com/user-attachments/assets/264790b3-c263-43be-83c8-7fa7ecd42931)
+![image](https://github.com/user-attachments/assets/d87128d1-dbfc-4205-a261-c37ba0fcf4f1)
+![image](https://github.com/user-attachments/assets/dc8e0455-3322-4ec4-8087-742887a04a2c)
+![image](https://github.com/user-attachments/assets/7b3f95ae-f53d-48a3-ab41-2101a25ae536)
+
 
 ## Questions
 
