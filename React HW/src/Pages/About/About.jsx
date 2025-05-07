@@ -7,10 +7,6 @@ function About() {
     <section className="about-section">
       <h2>About Me</h2>
       <div className="about-content">
-        <div className="profile-image">
-          {/* Replace with your actual image */}
-          <img src="https://via.placeholder.com/300" alt="Your Name" />
-        </div>
         <div className="bio">
           <p>
             Hello! I'm a web developer passionate about creating interactive and responsive web applications.
